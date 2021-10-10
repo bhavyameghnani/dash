@@ -93,7 +93,7 @@ const data2 = {
   };
 
 const data = {
-    labels: ['Steps Walked', 'Left'],
+    labels: ['Work Productivity', 'Left'],
     datasets: [
       {
         label: 'Steps for Today',
@@ -112,7 +112,7 @@ const data = {
   };
 
   const data3 = {
-    labels: ['Calorie Intake', 'Left'],
+    labels: ['Mental & Physical Wellness', 'Left'],
     datasets: [
       {
         label: 'Calorie Intake For The Day',

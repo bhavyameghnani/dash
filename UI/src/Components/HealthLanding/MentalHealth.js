@@ -108,7 +108,7 @@ export default function MentalHealth() {
           <main>
             <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
                 <Box gridColumn="span 12" className={classes.gaps}>
-                    <hr/>
+                    {/* <hr/> */}
                     <Typography gutterBottom variant="h4" component="div" className={classes.text}>
                         Mental Health Resources
                     </Typography>

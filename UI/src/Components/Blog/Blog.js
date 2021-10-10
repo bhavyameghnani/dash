@@ -74,7 +74,7 @@ Blog.propTypes = {
 };
 
 Blog.defaultProps = {
-  title : "Best Practices for ReactJS",
+  title : "Best Practices for the Technology",
   author : "Mary Sue",
   authorDesignation : "Front-end Engineer",
   blog : markdown,

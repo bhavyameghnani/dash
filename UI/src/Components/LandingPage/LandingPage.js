@@ -16,6 +16,12 @@ import Paper from '@material-ui/core/Paper';
 import toast from 'react-hot-toast';
 import dashboardImage from '../../Resources/Images/dashboard_imag.jpg';
 import dash from '../../Resources/Images/ey-dash.gif'
+import { Box } from '@material-ui/core';
+import Card from '@material-ui/core/Card';
+import { CardActionArea } from '@material-ui/core';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
   mainGrid: {
@@ -124,26 +130,39 @@ export default function Home() {
                   <b>👋Meet DASH by Team BAscheD👋</b>
                 </Typography>
                 <br/><br/>
-            <center>
-
-            <img src= {dash} align="center" />
-          </center>
-             
-              <Grid container spacing={3}>
-                {dashboardStats.map((paper) => (
-                  <Grid item key={paper.title} xs={6} sm={3}>
-                    <Paper elevation={0} className={classes.paper}>
-                      <Grid>
-                        <img alt="icon" src={paper.icon} className={classes.icon} />
-                      </Grid>
-                      <Typography variant='body1' className={classes.divHeading}>
-                        {paper.title}
-                      </Typography>
-                    </Paper>
-                  </Grid>
-                ))}
+           
+           
+           
+            <Grid container spacing={2} align="center">
+              <Grid item xs={6}>
+                <img src= {dash} align="center" />
               </Grid>
-              <br/>
+              <Grid item xs={6}>
+              <Typography variant="h5">
+                <b>Tips for the day!</b>
+              </Typography>
+              <hr/>
+                {tips.map(tip => (
+                  <Card>
+                      <CardContent>
+                          <Typography variant= "h6">
+                            {tip.name}
+                          </Typography>
+                      </CardContent>
+                      
+                  </Card>
+                ))}
+                <br/>
+                <Button 
+                        variant="contained"
+                        color="primary"
+                       
+                    >
+                        Magic Summary
+                    </Button>
+              </Grid>
+            </Grid>
+
               <hr/>
               <br/>
               <Grid container spacing={3}>
@@ -179,8 +198,8 @@ export default function Home() {
                             {(employee.imageObj) ? <img  alt="icon"src={employee.imageObj} width='100%' height='100%' /> : <FaceIcon />}
                           </Avatar>
                         </ListItemAvatar>
-                        {/* <ListItemText primary={employee.name + ' - ' + employee.team} secondary={employee.award} />/ */}
-                        <ListItemText primary={employee.name} secondary={employee.award} />
+                        <ListItemText primary={employee.name + ' - ' + employee.team} secondary={employee.award} />
+                        {/* <ListItemText primary={employee.name} secondary={employee.award} /> */}
                       </ListItem>
                     ))}
 
@@ -208,49 +227,49 @@ export default function Home() {
 const leaderBoard = [
   {
     name: 'Parmar Anand',
-    // team: 'RDCA Team',
+    team: 'RDCA Team',
     award: 'Star of the Month',
     imageObj: 'https://image.flaticon.com/icons/png/128/4470/4470317.png'
   },
   {
     name: 'Rinku Singh',
-    // team: 'BankOfTest Team',
+    team: 'BankOfTest Team',
     award: 'Star of the Month',
     imageObj: 'https://image.flaticon.com/icons/png/128/4086/4086600.png'
   },
   {
     name: 'Slesha Shinde',
-    // team: 'Analysis Team',
+    team: 'Analysis Team',
     award: 'Star of the Month',
     imageObj: 'https://image.flaticon.com/icons/png/128/4086/4086600.png'
   },
   {
     name: 'Ramesh Koshti',
-    // team: 'CCP Team',
+    team: 'CCP Team',
     award: 'Star of the Month',
     imageObj: 'https://image.flaticon.com/icons/png/128/4470/4470317.png'
   },
   {
     name: 'Rani Pardesi',
-    // team: 'Innovations Team',
+    team: 'Innovations Team',
     award: 'Maximum Efforts',
     imageObj: 'https://image.flaticon.com/icons/png/128/4086/4086600.png'
   },
   {
     name: 'Jitesh Verma',
-    // team: 'HR and Ops Team',
+    team: 'HR and Ops Team',
     award: 'Maximum Efforts',
     imageObj: 'https://image.flaticon.com/icons/png/128/4470/4470317.png'
   },
   {
     name: 'Sameer Desai',
-    // team: 'Accounting Team',
+    team: 'Accounting Team',
     award: 'Out of Box Thinker',
     imageObj: 'https://image.flaticon.com/icons/png/128/4470/4470317.png'
   },
   {
     name: 'Sakshi shetty',
-    // team: 'Support and Ops Team',
+    team: 'Support and Ops Team',
     award: 'SuperHuman Award',
     imageObj: 'https://image.flaticon.com/icons/png/128/4086/4086600.png'
   }
@@ -262,62 +281,62 @@ const leaderBoardPts = [
 
   {
     name: 'Alice Dsouza',
-    position: 'Mumbai',
+    position: 'Accounting Team',
     award: '1610pts',
     imageObj: 'https://image.flaticon.com/icons/png/128/3135/3135789.png'
   },
   {
     name: 'Sagar Shah',
-    position: 'Mumbai',
+    position: 'Innovation Team',
     award: '1580pts',
     imageObj: 'https://image.flaticon.com/icons/png/128/3135/3135715.png'
   },
   {
     name: 'Preet Singh',
-    position: 'Delhi',
+    position: 'IT',
     award: '1560pts',
     imageObj: 'https://image.flaticon.com/icons/png/128/3135/3135715.png'
   },
   {
     name: 'Ankita Rao',
-    position: 'Banglore',
+    position: 'Risk Team',
     award: '1540pts',
     imageObj: 'https://image.flaticon.com/icons/png/128/3135/3135789.png'
   },
   
   {
     name: 'Ana Dcosta',
-    position: 'Mumbai',
+    position: 'Risk Team',
     award: '1432pts',
     imageObj: 'https://image.flaticon.com/icons/png/128/3135/3135789.png'
   },
   {
     name: 'Krish Mehta',
-    position: 'Delhi',
+    position: 'Compliance',
     award: '1754pts',
     imageObj: 'https://image.flaticon.com/icons/png/128/3135/3135715.png'
   },
   {
     name: 'Gayatri Deshpande',
-    position: 'Mumbai',
+    position: 'Operations',
     award: '1150ts',
     imageObj: 'https://image.flaticon.com/icons/png/128/3135/3135789.png'
   },
   {
     name: 'Lavish Punjabi',
-    position: 'Mumbai',
+    position: 'Innovation Team',
     award: '1150pts',
     imageObj: 'https://image.flaticon.com/icons/png/128/3135/3135715.png'
   },
   {
     name: 'Imam Saad',
-    position: 'Mumbai',
+    position: 'Compliance',
     award: '1100pts',
     imageObj: 'https://image.flaticon.com/icons/png/128/3135/3135715.png'
   },
   {
     name: 'Bethany Rico',
-    position: 'Mumbai',
+    position: 'Accounting Team',
     award: '1000pts',
     imageObj: 'https://image.flaticon.com/icons/png/128/3135/3135789.png'
   },
@@ -342,3 +361,21 @@ const dashboardStats = [
     icon: "https://www.pngitem.com/pimgs/m/285-2854834_edu-huddle-diversity-and-inclusion-icon-hd-png.png",
   }
 ];
+
+const tips =[
+  {
+    name: 'Take 2 more coffee breaks daily'
+  },
+  {
+    name: 'Keep cutting down Todo List'
+  },
+  {
+    name: 'Learn Redux after React Js Course'
+  },
+  {
+    name: 'Try to stay till the end of Guided Meditation'
+  },
+  {
+    name: 'You need to reply emails faster'
+  }
+]

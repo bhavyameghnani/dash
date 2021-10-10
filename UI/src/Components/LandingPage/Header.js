@@ -11,7 +11,7 @@ import Link from '@material-ui/core/Link';
 
 const sections = [
   { title: 'Home', url: '#/home' },
-  { title: 'Work', url: '#/home' },
+  { title: 'Work', url: '#/work' },
   { title: 'UpSkill', url: '#/upskillzo' },
   { title: 'Health', url: '#/health' },
   { title: 'Community Connect', url: '#/communityconnect' },

@@ -81,10 +81,10 @@ const data2 = {
   };
 
 const data = {
-    labels: ['Steps Walked', 'Left'],
+    labels: ['Meetings Attended', 'Left'],
     datasets: [
       {
-        label: 'Steps for Today',
+        label: 'Meetings for Today',
         data: [120, 70],
         backgroundColor: [
             'rgba(54, 162, 235, 0.8)',
@@ -100,7 +100,7 @@ const data = {
   };
 
   const data3 = {
-    labels: ['Calorie Intake', 'Left'],
+    labels: ['Chatting time', 'Left'],
     datasets: [
       {
         label: 'Calorie Intake For The Day',
@@ -132,33 +132,33 @@ const data = {
 
   const stats = [
     {
-        name : "Heart Rate",
-        image : "https://i.pinimg.com/originals/c3/b2/df/c3b2dff7986e701847f213423683f00a.png",
-        data : "70bpm"
+        name : "Meetings Attended",
+        image : "http://simpleicon.com/wp-content/uploads/meeting.png",
+        data : "120mins"
     },
     {
-        name : "Step Count",
-        image : "https://www.vhv.rs/dpng/d/468-4683599_footprint-steps-steps-icon-white-png-transparent-png.png",
-        data : "1200 Steps"
+        name : "Mails Sent ",
+        image : "https://cdn4.iconfinder.com/data/icons/mails-1/48/expand-color-emails-26-512.png",
+        data : "10"
     },
     {
-        name : "Sleep",
-        image : "https://www.iconpacks.net/icons/2/free-moon-icon-2287-thumb.png",
-        data : "7hrs 35m"
+        name : "Chat Time",
+        image : "https://cdn.iconscout.com/icon/premium/png-256-thumb/chat-261-163906.png",
+        data : "30mins"
     },
     {
-        name : "Distance",
-        image : "https://cdn.iconscout.com/icon/premium/png-256-thumb/distance-28-640095.png",
-        data : "6.08 km"
+        name : "Meetings Unattended",
+        image : "https://cdn.iconscout.com/icon/premium/png-256-thumb/meetings-1-904270.png",
+        data : "10"
     },
     {
-        name : "Calories",
-        image : "https://cdn.iconscout.com/icon/premium/png-256-thumb/calories-1709710-1452635.png",
-        data : "147 cal"
+        name : "Mail read",
+        image : "https://cdn4.iconfinder.com/data/icons/mails-1/48/expand-color-emails-26-512.png",
+        data : "25"
     }
   ]
 
-export default function Stats() {
+export default function WorkStats() {
   const classes = useStyles();
   return (
     <React.Fragment>
@@ -170,7 +170,7 @@ export default function Stats() {
                     <Card>
                         <CardContent>
                             <Typography variant= "h6">
-                                Today's Health Statistics
+                                Today's Work Statistics
                             </Typography>
                             <hr/>
                             <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -204,7 +204,7 @@ export default function Stats() {
                 </Box>
                 <Box gridColumn="span 6" className={classes.gaps}>
                     <Typography variant="overline">
-                        Colleauges meeting their Fitness Goals this week!
+                        Colleauges meeting their Working Goals this week!
                     </Typography>
                     <hr/>
                     <Line data={data2} options={options} height={200}/>
@@ -212,19 +212,19 @@ export default function Stats() {
                 <Box gridColumn="span 6" className={classes.gaps}>
                     <Card sx={{ maxWidth: 345 }}>
                         {/* <NavLink to='/deskexercise'> */}
-                            <CardActionArea href = '#/deskexercise'>
+                            <CardActionArea href = '#/note'>
                                 <CardMedia
                                 component="img"
                                 height="300"
-                                image="https://img.freepik.com/free-vector/happy-man-exercising-park_113065-39.jpg?size=626&ext=jpg"
+                                image="https://www.clearvoice.com/wp-content/uploads/2018/06/06.29.18_Hero_1360x646-810x385.png"
                                 alt="green iguana"
                                 />
                                 <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
-                                    Desk Excercises
+                                    Smart Todo Task Notes
                                 </Typography>
                                 <Typography variant="overline" color="text.secondary">
-                                    Try out within 10 minutes.
+                                    AI powered ToDo Task Reminder
                                 </Typography>
                                 </CardContent>
                             </CardActionArea>
