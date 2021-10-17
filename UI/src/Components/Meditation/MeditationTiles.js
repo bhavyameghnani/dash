@@ -245,7 +245,7 @@ export default function MeditationTiles() {
       link: "/#/breathing",
       description:
       'Points - 2000',
-      image: 'https://witchcraftandwitches.com/wp-content/uploads/2018/02/meditation-visualization-witchcraft-paganism-magic-1080x1080.jpg',
+      image: 'https://vedicpaths.com/wp-content/uploads/2020/04/healinghypnosis.jpg',
       imageText: 'Artists name',
       readmore: "Sitting at your desk, cover your left knee with your right hand and look over your left shoulder. Hold this pose for 30 seconds to stretch your back, remembering to breathe. Repeat the action on the opposite side."
     },

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
@@ -16,6 +16,8 @@ import Paper from '@material-ui/core/Paper';
 import toast from 'react-hot-toast';
 import dashboardImage from '../../Resources/Images/dashboard_imag.jpg';
 import dash from '../../Resources/Images/ey-dash.gif'
+import digiHuman from '../../Resources/Images/digitalhuman.gif'
+import placeholderdigiHuman from '../../Resources/Images/placeholderdigitalhuman.gif'
 import { Box } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import { CardActionArea } from '@material-ui/core';
@@ -100,8 +102,10 @@ const mainFeaturedPost = {
 
 export default function Home() {
   const classes = useStyles();
+  const [gifOpen, setGifOpen] = React.useState(false);
 
   React.useEffect(() => {
+    
 
     notifyWelcome();
   }, []);
@@ -112,6 +116,45 @@ export default function Home() {
     toast.success("DASH welcomes you !");
 
   };
+
+  var msg;
+  var voices;
+
+  // function timer(m){
+  //   var timer = setInterval(function() {
+  //       voices = speechSynthesis.getVoices();
+  //       console.log(voices);
+  //       if (voices.length !== 0) {
+  //           msg = new SpeechSynthesisUtterance();
+  //           msg.voice = voices[0];
+  //           speechSynthesis.speak(msg);
+  //           msg.lang = 'en-US';
+  //           clearInterval(timer);
+  //       }
+  //   }, 200);
+  //   timer();
+  //   speechSynthesis.speak(m)
+  // }
+
+  function say(text) {
+
+    const awaitVoices = new Promise(resolve=> 
+      window.speechSynthesis.onvoiceschanged = resolve)  
+    .then(()=> {
+      const synth = window.speechSynthesis;
+  
+      var voices = synth.getVoices();
+      console.log(voices)
+  
+      const utterance = new SpeechSynthesisUtterance();
+      utterance.voice = voices[18];        
+      utterance.text = text;
+  
+      synth.speak(utterance);
+    });
+  }
+  
+  
 
   return (
     <React.Fragment>
@@ -133,19 +176,20 @@ export default function Home() {
            
            
            
-            <Grid container spacing={2} align="center">
-              <Grid item xs={6}>
-                <img src= {dash} align="center" />
+            <Grid container spacing={2} align="center" style={{backgroundColor: 'black'}}>
+              <Grid item xs={6} >
+                {gifOpen && <img src= {digiHuman} align="center" height="500px" />}
+                {!gifOpen && <img src= {placeholderdigiHuman} align="center" height="500px" />}
               </Grid>
               <Grid item xs={6}>
-              <Typography variant="h5">
+              <Typography style={{color:'#FFFFFF'}} variant="h5">
                 <b>Tips for the day!</b>
               </Typography>
               <hr/>
                 {tips.map(tip => (
-                  <Card>
+                  <Card style={{backgroundColor: 'black'}}>
                       <CardContent>
-                          <Typography variant= "h6">
+                          <Typography style={{color:'#FFFFFF'}}variant= "h6">
                             {tip.name}
                           </Typography>
                       </CardContent>
@@ -156,6 +200,11 @@ export default function Home() {
                 <Button 
                         variant="contained"
                         color="primary"
+                        onClick={()=>{
+                          setGifOpen(!gifOpen);
+                          say("Hey Buddy. Good Morning. Hope you are doing well. Today's tip of the day is you need to learn blokchain basic for your next assignment.")
+                          
+                        }}
                        
                     >
                         Magic Summary
