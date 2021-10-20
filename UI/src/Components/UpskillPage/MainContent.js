@@ -222,6 +222,8 @@ export default function MainContent(props) {
                     </Typography>
                     <Typography variant="body1" align="left" gutterBottom className={classes.desc}>
                         Great going! Don't let your streak break.
+                        <br/>
+                        Points: 20
                     </Typography>
                     <CalendarComponent />
                 </Grid>
