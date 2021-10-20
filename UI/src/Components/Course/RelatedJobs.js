@@ -65,20 +65,20 @@ RelatedJobs.defaultProps = {
     course: {
         relatedJobs : [
             {
-            name : "FullStack Developer",
-            id : "/courses"
+                name : "FullStack Developer",
+                link : "#/courses"
             },
             {
                 name : "Software Engineer ",
-                id : "/courses"
+                link : "#/courses"
             },
             {
                 name : "Frontend Engineer",
-                id : "/courses"
+                link : "#/courses"
             }, 
             {
                 name : "SDE 1",
-                id : "/courses"
+                link : "#/courses"
             }
         ]
     }

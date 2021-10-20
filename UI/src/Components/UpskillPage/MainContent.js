@@ -9,6 +9,7 @@ import Learnings from './Learnings';
 import Articles from './Articles';
 import toast, { Toaster } from 'react-hot-toast';
 import Events from './Events';
+import Tracks from './Tracks';
 //import Link from '@material-ui/core/Link';
 
 const notifyRecommendCourse = () => {
@@ -103,6 +104,12 @@ const featuredCourses = [
     },
 ];
 
+const tracks = [
+    {
+        title: 'Frontend Developer Track',
+        value: '60',
+    },
+];
 
 const featuredBlogs = [
     {
@@ -206,7 +213,13 @@ export default function MainContent(props) {
                     Learnings in Progress :
                 </Typography>
                 <Learnings learnings={featuredCourses} />
-
+                
+                <br />
+                <Typography variant="subtitle1" align="left" gutterBottom className={classes.subHeading}>
+                    Track Specific Progress :
+                </Typography>
+                <Tracks track={tracks} />
+                
                 <br />
                 <Typography variant="subtitle1" align="left" gutterBottom className={classes.subHeading}>
                     Upcoming Learning Events : 

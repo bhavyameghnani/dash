@@ -49,13 +49,14 @@ function Course({course}) {
                                     <Typography component="div" variant="h3" className={classes.textLeft}>
                                         {name}
                                     </Typography>
+                                    <hr/>
                                     <Typography variant="h6" color="text.secondary" component="div" className={classes.textLeft}>
                                         {instructor}
                                     </Typography>
                                 </CardContent>
-                                <Box sx={{ pl: 2, pb: 3, mb: 4 }} className={classes.flex}>
+                                <Box className={classes.flex}>
                                     <Typography className={classes.textPad}>
-                                        Duration : {duration}
+                                        Number of modules : {duration}
                                     </Typography>
                                 </Box>
                             </Box>
@@ -82,11 +83,11 @@ Course.propTypes = {
 
 Course.defaultProps = {
     course: {
-        name : "React JS Fundamentals",
-        completed : 30,
-        instructor : "Paul A. Wright",
+        name : "Front End Developer Track",
+        completed : 60,
+        instructor : "Created By : Tanay Pratap",
         stars : "5",
-        duration : "7hr 35min"
+        duration : "17"
     }
 }
 
