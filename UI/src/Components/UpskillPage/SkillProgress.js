@@ -59,21 +59,25 @@ export default function SkillProgress(props) {
             title: 'Courses Completed',
             value: progress.courses_completed,
             icon: "https://cdn3.iconfinder.com/data/icons/online-learning-vol-1-2/64/Online_Learning-256.png",
+            pt: 3,
         },
         {
             title: 'Courses In Progress',
             value: progress.courses_in_progress,
             icon: "https://cdn3.iconfinder.com/data/icons/online-learning-vol-1-2/64/Video_Lession-256.png",
+            pt: 6,
         },
         {
             title: 'Badges Earned',
             value: progress.badges_earned,
             icon: "https://cdn0.iconfinder.com/data/icons/business-and-management-flat-8/24/ACHIEVEMENT_reward_winner_achievements-256.png",
+            pt: 8
         },
         {
             title: 'Certifications Acquired',
             value: progress.certfications,
             icon: "https://cdn3.iconfinder.com/data/icons/higher-education-icon-set/256/diploma.png",
+            pt:4
         },
     ];
 
@@ -92,7 +96,7 @@ export default function SkillProgress(props) {
                             </Grid>
                             <Grid>
                                 <Typography variant='h5' className={classes.courseValue}>
-                                    <b>{paper.value}</b>
+                                    <b>{paper.pt}</b>
                                 </Typography>
                             </Grid>
                             <Typography variant='body1' className={classes.courseDesc}>

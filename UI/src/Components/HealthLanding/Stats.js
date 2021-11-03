@@ -160,17 +160,17 @@ export default function Stats() {
     {
         name : "Heart Rate",
         image : "https://i.pinimg.com/originals/c3/b2/df/c3b2dff7986e701847f213423683f00a.png",
-        data : health.heart_rate
+        data : '80bpms'
     },
     {
         name : "Step Count",
         image : "https://www.vhv.rs/dpng/d/468-4683599_footprint-steps-steps-icon-white-png-transparent-png.png",
-        data : health.step_count
+        data : '150steps'
     },
     {
         name : "Sleep",
         image : "https://www.iconpacks.net/icons/2/free-moon-icon-2287-thumb.png",
-        data : health.sleep
+        data : '4hrs'
     },
     {
       name : "Distance",

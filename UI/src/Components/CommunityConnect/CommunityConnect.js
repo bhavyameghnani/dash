@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
 const mainFeaturedPost = {
     title: 'TGIF - Community Connect',
     description:
-      "Be the change you want to see - Giving back to the community exclusively on Weekends. Supported by EY Cares.",
+      "Be the change you want to see - Giving back to the community exclusively on Weekends.",
       image: "https://c1.wallpaperflare.com/preview/120/295/591/teamwork-team-fist-bump-collaborate.jpg",
     imgText: 'main image description',
     linkText: 'Continue reading…'
